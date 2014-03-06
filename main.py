@@ -44,6 +44,7 @@ def route_main():
 		url = request.POST.get('url','').strip()
 		add = request.POST.get('addplaylist','').strip()
 		subprocess.call(['./youtube-dl', '-o /tmp/%(title)s.%(ext)s', '--extract-audio', str(url)])
+		subprocess.call(['mpc', 'update', '--wait', 'youtube'])
 		rtn = html['top'] + html['main'] + html['done'] + html['bottom']
 	else:
 		rtn = html['top'] + html['main'] + html['bottom']
