@@ -1,3 +1,4 @@
 # the script will download these for us
 bottle.py
 youtube-dl
+__pycache__/

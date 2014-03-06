@@ -10,3 +10,5 @@ download = {
 for elem in download:
 	if not os.path.isfile(elem):
 		urllib.request.urlretrieve(download[elem], elem)
+
+import bottle
